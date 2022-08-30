@@ -1,4 +1,4 @@
 # Oracle
 Sample Scripts
 
-This section contain SQL related content.
+This section contain PL/SQL tutorials and sample codes
