@@ -1,4 +1,5 @@
- ```sql
+
+
  ***********************************
        1. check partiotions
  ***********************************
@@ -52,6 +53,8 @@ Alter table RFARCH.STK_STOCK_TAKE_RESULT_AUDIT
 move partition SYS_P37023 row store compress advanced;
 
 AFTER COMPRESSION 
-![image](https://user-images.githubusercontent.com/87269794/187383658-47261749-6ec9-4ed2-b158-ef49166206f5.png)
+![after compression](https://user-images.githubusercontent.com/87269794/187385156-11478e42-609b-4d5d-a688-0a15fc643a49.png)
 
-```
+BEFORE COMPRESSION:
+
+NOCOMPRESS
