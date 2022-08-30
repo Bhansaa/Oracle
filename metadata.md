@@ -1,3 +1,4 @@
+ ```sql
  ***********************************
        1. check partiotions
  ***********************************
@@ -53,3 +54,4 @@ move partition SYS_P37023 row store compress advanced;
 AFTER COMPRESSION 
 ![image](https://user-images.githubusercontent.com/87269794/187383658-47261749-6ec9-4ed2-b158-ef49166206f5.png)
 
+```
