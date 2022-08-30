@@ -9,7 +9,7 @@ LOOP
   /* Analyze related indexes */
   FOR c_idx IN (select index_name from user_indexes where table_name = c_table.table_name)
   LOOP
-      DBMS_STATS.gather_index_stats('<schema/username>, c_idx.index_name, null, DBMS_STATS.AUTO_SAMPLE_SIZE);  
+      DBMS_STATS.gather_index_stats(<schema/username>, c_idx.index_name, null, DBMS_STATS.AUTO_SAMPLE_SIZE);  
   END LOOP;  
 END LOOP;
 EXCEPTION
