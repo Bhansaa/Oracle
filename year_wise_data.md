@@ -5,6 +5,7 @@
 
 
 ```sql
+
   SELECT COUNT (*),
          TO_CHAR (CREATED_DATETIME, 'MON YYYY')     AS YEAR,
          MIN (CREATED_DATETIME)
@@ -13,7 +14,7 @@
 GROUP BY TO_CHAR (CREATED_DATETIME, 'YYYY')
 ORDER BY TO_CHAR (CREATED_DATETIME, 'YYYY') DESC
  
-
+/* Formatted on 30/08/2022 11:00:44 (QP5 v5.381) */
   SELECT TO_CHAR (TRUNC (created_datetime, 'MM'), 'MON YYYY') month, COUNT (*)
     FROM MW_RF_PICK_CONFIRM
    WHERE     dc_code IN (901, 905, 904)
