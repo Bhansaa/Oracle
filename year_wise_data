@@ -2,7 +2,7 @@
          to get data year and month wise format
 -------------------------------------------------------------
 
-
+'''sql
   SELECT COUNT (*),
          TO_CHAR (CREATED_DATETIME, 'MON YYYY')     AS YEAR,
          MIN (CREATED_DATETIME)
@@ -19,4 +19,4 @@ ORDER BY TO_CHAR (CREATED_DATETIME, 'YYYY') DESC
 GROUP BY TO_CHAR (TRUNC (created_datetime, 'MM'), 'MON YYYY')
 ORDER BY TO_CHAR (TRUNC (created_datetime, 'MM'), 'MON YYYY') DESC, dc_code;
 
- 
+ '''
