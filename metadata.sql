@@ -52,6 +52,7 @@ move partition SYS_P37023 row store compress advanced;
 
 AFTER COMPRESSION 
 
+![image](https://user-images.githubusercontent.com/87269794/187382916-c955908d-fe47-4a2d-bb59-cdd56861d1c7.png)
 
 
   
