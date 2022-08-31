@@ -1,4 +1,4 @@
-The table types Oracle Database supports includes:
+# The table types Oracle Database supports includes:
   --> Heap organized
   --> Index organized
   --> Externally organized
