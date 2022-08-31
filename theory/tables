@@ -72,7 +72,7 @@ By default you get a heap-organized table. If you want to create a table with di
 you need to specify this.
  For example, to create an index-organized table, specify a primary key and add the organization index clause:
  
- 
+```sql 
 SYNTAX:
 
 create table bricks (
@@ -88,3 +88,4 @@ create table bricks (
   partition p_green values ( 'green' ),
   partition p_blue values ( 'blue' )
 );
+```
