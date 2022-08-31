@@ -1,27 +1,27 @@
 # The table types Oracle Database supports includes:
-  --> Heap organized
-  --> Index organized
-  --> Externally organized
-  --> Temporary 
+##  --> Heap organized
+##  --> Index organized
+##  --> Externally organized
+##  --> Temporary 
   
 The table types include:
--->Heap tables
+####-->Heap tables
 These are the default table type. They are good for general-purpose data access.
 Most of the tables you create will be heaps. 
 
--->Index Organized Table (IOT)
+####-->Index Organized Table (IOT)
 An IOT stores data physically ordered according to the primary key. 
 These are most suitable when you want to ensure fast data access by this key. 
 
--->External Table
+####-->External Table
 You use external tables to read non-database files using SQL.
  These are ideal if you need to load comma separate value (CSV) files into your database.
  
--->Temporary Table 
+####-->Temporary Table 
 These store data private to your session.
  These are useful if you have processes which save working data that you need to remove when its complete.
  
-Table Clusters
+##Table Clusters
 
 This is a data structure that can hold many tables. 
 Rows from different tables with the same cluster key go in the same place.
@@ -41,9 +41,12 @@ Physically storing rows with similar properties near each other can make data ac
  For example, say you arrange your toys by color. This makes it easier to find all the red toys. 
 The data structures you can use to impose some order on your data include:
 
---> Index Organized Table 
+##--> Index Organized Table 
+
 Here the data are stored sorted according to the primary key. For example, if the primary key column stores the values 1, 2, 3, etc. the row with the value 2 is guaranteed to be "between" those with 1 and 3. 
-Partitioned Table
+
+##Partitioned Table
+
 Partitioning effectively splits your table into smaller tables. You can partition heap tables and IOTs.
  Like a standard heap table, Oracle Database adds rows to a partitioned heap wherever there is space within the partition.
  But rows in a partitioned IOT must go in the correct place within the partition defined by the primary key. 
@@ -53,14 +56,14 @@ You must choose a partitioning strategy to use this.
 
 Note: Partitioning is an extra cost option! Ensure you are licensed to use it before you start doing so. 
 
---> Table Clusters
+###--> Table Clusters
 This enables you physically store rows from many tables in the same place. 
 This can make it faster to get related rows from different tables. 
 For example, say you have two tables, one for teddies and one for bricks. 
 You often want to find all the bricks and teddies of the same colour.
  By placing these in a cluster, grouped by colour this reduces the work you do to find all the red items.
 
---> CREATE TABLE
+###--> CREATE TABLE
 
 To create a table, you need to specify its:
 Name
@@ -73,7 +76,7 @@ you need to specify this.
  For example, to create an index-organized table, specify a primary key and add the organization index clause:
  
 ```sql 
-SYNTAX:
+##SYNTAX:
 
 create table bricks (
   color  varchar2(30) primary key,
