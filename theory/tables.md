@@ -21,7 +21,7 @@ You use external tables to read non-database files using SQL.
 These store data private to your session.
  These are useful if you have processes which save working data that you need to remove when its complete.
  
-##Table Clusters
+##**Table Clusters**
 
 This is a data structure that can hold many tables. 
 Rows from different tables with the same cluster key go in the same place.
