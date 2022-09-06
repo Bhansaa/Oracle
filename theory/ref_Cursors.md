@@ -1,23 +1,27 @@
 # REF CURSORS:
 
+## points to note:
  --> just as pointers --> hold memory addresses of actual variables
-  --> REFERENCE CURSORS(REF CURSORS)
+ --> REFERENCE CURSORS(REF CURSORS)
  --> You can use a cursor for multiple queries
- --> We cannot:
-		> Assing null values
-		> Use in table-view create codes
-		> Store in collections
-		> Compare
- --> How do we use ref cursors?
- --> There two types of reference cursors
+ 
+ >>>We cannot:
+ 	> Assing null values
+ 	> Use in table-view create codes
+ 	> Store in collections
+ 	> Compare
+ 
+ >>>There two types of reference cursors
 		> Strong (restrictive)cursors
 		> Weak(nonrestrictive)cursors.
- -->  SYNTAX:
+
 		> if no return type is mentined then WEAK otherwise STRONG
 		> IF strong cursor we can also create recordtype for that
 		> for dyanamic queries we use weak ref cursors
 		> WEAK can have bind variables
 		> BUILT in weak ref--> sys_refcursor
+		
+ -->  SYNTAX:
 type cursor_type_name is ref cursor [return return_type]
 
 ```sql
