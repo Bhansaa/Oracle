@@ -1,4 +1,4 @@
-# Using IN & OUT Parameters (Code Samples)
+## Using IN & OUT Parameters (Code Samples)
 
 ```sql
 -----------------Creating a procedure with the IN parameters
@@ -57,4 +57,45 @@ begin
  PRINT('The average salary increase is : '|| v_sal_inc || ' percent!..');
  PRINT('SALARY INCREASE FINISHED!..');
 end;
+```
+## CALLING PROCEDURE WITHOUT PARAMETER
+
+```sql
+CREATE OR REPLACE PROCEDURE print (text  varchar2 default 'This is print procedure...')
+    IS
+BEGIN
+    DBMS_OUTPUT.PUT_LINE(text); 
+END;
+
+--used default keyword to call procedure without paramenter;
+
+BEGIN
+    print('hello');
+END;
+--printed the default value 
+BEGIN
+    print();
+END;
+```
+
+
+## NAMED/Mixed NOTATION and DEFAULT keyword
+
+```sql
+CREATE OR REPLACE PROCEDURE add_job (job_id  varchar2 ,job_title varchar2,min_salary number default 1000 ,MAX_SALARY number default null)
+    IS
+BEGIN
+    insert into jobs values (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY);
+    print ('The job ' ||JOB_TITLE ||' is inserted');
+END;
+
+
+SELECT * FROM  jobs 
+
+exec add_job('it_dir5','directory',5000,20000);
+
+--NAMED NOTATION  --> allow us to skip parameter independent from position
+-- exec procedure (parameter_name => value|expression)
+
+exec add_job('it_dir5','directory',max_salary => 20000);
 ```
